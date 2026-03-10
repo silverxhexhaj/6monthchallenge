@@ -31,14 +31,12 @@ export function Hero() {
         >
           Join the Waitlist
         </Link>
-        <a
-          href="https://x.com"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/journey"
           className="inline-block border border-border px-8 py-4 text-[0.85rem] font-bold tracking-[3px] text-muted no-underline uppercase transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
         >
           Follow the Journey ↗
-        </a>
+        </Link>
       </div>
       <div className="relative z-10 mt-14 flex gap-12 animate-[fadeDown_1s_ease_1s_both]">
         {stats.map((s) => (

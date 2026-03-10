@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const contentTypes = [
   {
     type: "Daily",
@@ -32,7 +34,7 @@ export function FounderJourney() {
         </h2>
         <p className="mb-12 text-[1.05rem] leading-[1.8] text-muted">
           I built this system and I am the first one to live it. Every day I document my progress
-          publicly on X — the wins, the struggles, the ugly days, and the breakthroughs.
+          publicly — the wins, the struggles, the ugly days, and the breakthroughs.
           If this system transforms me, it will transform you. Follow the journey and watch the
           proof build in real time.
         </p>
@@ -47,14 +49,22 @@ export function FounderJourney() {
             </div>
           ))}
         </div>
-        <a
-          href="https://x.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-accent px-12 py-4 text-[0.85rem] font-bold tracking-[3px] text-black no-underline uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_10px_40px_rgba(232,197,71,0.2)]"
-        >
-          Follow on X ↗
-        </a>
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <Link
+            href="/journey"
+            className="inline-block bg-accent px-12 py-4 text-[0.85rem] font-bold tracking-[3px] text-black no-underline uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_10px_40px_rgba(232,197,71,0.2)]"
+          >
+            See Live Progress ↗
+          </Link>
+          <a
+            href="https://x.com/silverxhexhaj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border border-border px-8 py-4 text-[0.85rem] font-bold tracking-[3px] text-muted no-underline uppercase transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+          >
+            Follow on X
+          </a>
+        </div>
       </div>
     </section>
   );
