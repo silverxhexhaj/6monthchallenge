@@ -7,20 +7,29 @@ export function FinalCta() {
         The Next 6 Months
         <br />
         <span className="block bg-gradient-to-br from-accent to-phase2 bg-clip-text text-transparent">
-          Are Yours.
+          Start Now.
         </span>
       </h2>
       <p className="relative z-10 mx-auto my-6 max-w-[550px] text-muted">
-        Move with speed. Move with purpose. Move with the kind of intensity
-        that forces success to happen. When they&apos;re over, the world will
-        not recognize you.
+        Cohort 1 is accepting a limited number of members. Reserve your spot,
+        follow the founder&apos;s journey on X, and show up for the next 6 months.
       </p>
-      <Link
-        href="#phase1"
-        className="relative z-10 inline-block bg-accent px-16 py-5 text-[0.9rem] font-bold tracking-[3px] text-black no-underline uppercase transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_15px_50px_rgba(232,197,71,0.15)]"
-      >
-        Start Phase One Now
-      </Link>
+      <div className="relative z-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <Link
+          href="#pricing"
+          className="inline-block bg-accent px-16 py-5 text-[0.9rem] font-bold tracking-[3px] text-black no-underline uppercase transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_15px_50px_rgba(232,197,71,0.15)]"
+        >
+          Reserve Your Spot
+        </Link>
+        <a
+          href="https://x.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block border border-border px-10 py-5 text-[0.9rem] font-bold tracking-[3px] text-muted no-underline uppercase transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:text-accent"
+        >
+          Follow on X ↗
+        </a>
+      </div>
     </section>
   );
 }

@@ -1,11 +1,12 @@
 import { Hero } from "@/components/landing/Hero";
-import { Manifesto } from "@/components/landing/Manifesto";
-import { Overview } from "@/components/landing/Overview";
-import { PhaseSection } from "@/components/landing/PhaseSection";
-import { Blueprint } from "@/components/landing/Blueprint";
-import { Rules } from "@/components/landing/Rules";
-import { Affirmations } from "@/components/landing/Affirmations";
+import { ForYouIf } from "@/components/landing/ForYouIf";
+import { HowItWorks } from "@/components/landing/HowItWorks";
 import { Tracker } from "@/components/landing/Tracker";
+import { PhaseSection } from "@/components/landing/PhaseSection";
+import { WhatYouGet } from "@/components/landing/WhatYouGet";
+import { FounderJourney } from "@/components/landing/FounderJourney";
+import { Blueprint } from "@/components/landing/Blueprint";
+import { Pricing } from "@/components/landing/Pricing";
 import { FinalCta } from "@/components/landing/FinalCta";
 import { Footer } from "@/components/landing/Footer";
 import { phases } from "@/lib/phaseData";
@@ -14,15 +15,16 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Manifesto />
-      <Overview />
+      <ForYouIf />
+      <HowItWorks />
+      <Tracker />
       {phases.map((phase) => (
         <PhaseSection key={phase.id} phase={phase} />
       ))}
+      <WhatYouGet />
+      <FounderJourney />
       <Blueprint />
-      <Rules />
-      <Affirmations />
-      <Tracker />
+      <Pricing />
       <FinalCta />
       <Footer />
     </>

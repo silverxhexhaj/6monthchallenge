@@ -20,8 +20,8 @@ export const phases: PhaseData[] = [
   {
     id: 1,
     number: "01",
-    title: "Master Your Time",
-    timeline: "Month 1 — Foundation",
+    title: "Command Your Time",
+    timeline: "Level 1 — Month 1: Foundation",
     description:
       "Without controlling your time, nothing else works. Every single moment must serve your mission. Your schedule becomes your weapon.",
     color: "phase1",
@@ -55,8 +55,8 @@ export const phases: PhaseData[] = [
   {
     id: 2,
     number: "02",
-    title: "Build Unbreakable Discipline",
-    timeline: "Month 2 — The Hardest Month",
+    title: "Forge Iron Discipline",
+    timeline: "Level 2 — Month 2: The Hardest Month",
     description:
       "Discipline is the bridge between goals and results. Not talent, not luck, not intelligence — just the relentless ability to show up and do what needs to be done.",
     color: "phase2",
@@ -91,7 +91,7 @@ export const phases: PhaseData[] = [
     id: 3,
     number: "03",
     title: "Raise Your Standards",
-    timeline: "Month 3–4 — Level Up",
+    timeline: "Level 3 — Month 3–4: Raise the Bar",
     description:
       "What you tolerate becomes your reality. If you tolerate mediocrity, you stay average. Demand excellence from yourself in everything you do.",
     color: "phase3",
@@ -125,8 +125,8 @@ export const phases: PhaseData[] = [
   {
     id: 4,
     number: "04",
-    title: "Develop an Unshakable Mindset",
-    timeline: "Month 4–5 — Mental Fortress",
+    title: "Build a Fortress Mind",
+    timeline: "Level 4 — Month 4–5: Mental Fortress",
     description:
       "Build a mind so strong that nothing can break you. One that doesn't give in to doubt, doesn't surrender to fear, and doesn't get shaken by obstacles.",
     color: "phase4",
@@ -160,8 +160,8 @@ export const phases: PhaseData[] = [
   {
     id: 5,
     number: "05",
-    title: "Relentless Execution",
-    timeline: "Month 5–6 — Full Acceleration",
+    title: "Execute Without Mercy",
+    timeline: "Level 5 — Month 5–6: Full Acceleration",
     description:
       "All the discipline in the world means nothing without consistent action at the highest level. Stop overthinking. Become a machine of execution.",
     color: "phase5",
