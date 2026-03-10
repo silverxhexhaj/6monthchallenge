@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6 Months to Transform Your Life</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --dark: #111111;
+    --card: #161616;
+    --border: #222222;
+    --accent: #E8C547;
+    --accent-dim: #C4A32E;
+    --white: #f5f0e8;
+    --muted: #8a8577;
+    --phase1: #E8C547;
+    --phase2: #E87247;
+    --phase3: #47B8E8;
+    --phase4: #47E89A;
+    --phase5: #C747E8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+
+  /* ========== HERO ========== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+      radial-gradient(ellipse at 30% 20%, rgba(232,197,71,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 80%, rgba(232,114,71,0.05) 0%, transparent 50%);
+    animation: heroGlow 12s ease-in-out infinite alternate;
+  }
+
+  @keyframes heroGlow {
+    0% { transform: rotate(0deg) scale(1); }
+    100% { transform: rotate(3deg) scale(1.05); }
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeDown 1s ease 0.2s both;
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 12vw, 11rem);
+    line-height: 0.9;
+    letter-spacing: -2px;
+    position: relative;
+    z-index: 1;
+    animation: fadeDown 1s ease 0.4s both;
+  }
+
+  .hero h1 span {
+    display: block;
+    background: linear-gradient(135deg, var(--accent), var(--phase2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--muted);
+    max-width: 600px;
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeDown 1s ease 0.6s both;
+  }
+
+  .hero-cta {
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeDown 1s ease 0.8s both;
+  }
+
+  .hero-cta a {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--accent);
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .hero-cta a:hover {
+    background: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(232,197,71,0.2);
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    animation: bounce 2s ease infinite;
+  }
+
+  .scroll-indicator span {
+    display: block;
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--accent));
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ========== MANIFESTO ========== */
+  .manifesto {
+    padding: 8rem 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .manifesto blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--white);
+    position: relative;
+  }
+
+  .manifesto blockquote::before {
+    content: '"';
+    font-size: 8rem;
+    position: absolute;
+    top: -3rem;
+    left: -1rem;
+    color: var(--accent);
+    opacity: 0.3;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .manifesto .attrib {
+    margin-top: 2rem;
+    color: var(--accent);
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  /* ========== OVERVIEW ========== */
+  .overview {
+    padding: 6rem 2rem;
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .overview-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .overview-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    transition: all 0.4s ease;
+  }
+
+  .overview-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+  }
+
+  .overview-card .num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .overview-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin: 0.75rem 0;
+  }
+
+  .overview-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* ========== PHASE SECTIONS ========== */
+  .phase {
+    padding: 6rem 2rem;
+    position: relative;
+  }
+
+  .phase + .phase {
+    border-top: 1px solid var(--border);
+  }
+
+  .phase-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .phase-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(5rem, 10vw, 8rem);
+    line-height: 0.85;
+    opacity: 0.15;
+  }
+
+  .phase-title-group h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 2px;
+    line-height: 1.1;
+  }
+
+  .phase-title-group .timeline {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+
+  .phase-desc {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+  }
+
+  .action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .action-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .action-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    transition: height 0.4s ease;
+  }
+
+  .action-card:hover {
+    border-color: #333;
+    transform: translateY(-2px);
+  }
+
+  .action-card h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.75rem;
+  }
+
+  .action-card p {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+
+  .action-card .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  /* Phase color coding */
+  .phase--1 .phase-number, .phase--1 h2 { color: var(--phase1); }
+  .phase--1 .timeline { color: var(--phase1); }
+  .phase--1 .action-card::before { background: var(--phase1); }
+
+  .phase--2 .phase-number, .phase--2 h2 { color: var(--phase2); }
+  .phase--2 .timeline { color: var(--phase2); }
+  .phase--2 .action-card::before { background: var(--phase2); }
+
+  .phase--3 .phase-number, .phase--3 h2 { color: var(--phase3); }
+  .phase--3 .timeline { color: var(--phase3); }
+  .phase--3 .action-card::before { background: var(--phase3); }
+
+  .phase--4 .phase-number, .phase--4 h2 { color: var(--phase4); }
+  .phase--4 .timeline { color: var(--phase4); }
+  .phase--4 .action-card::before { background: var(--phase4); }
+
+  .phase--5 .phase-number, .phase--5 h2 { color: var(--phase5); }
+  .phase--5 .timeline { color: var(--phase5); }
+  .phase--5 .action-card::before { background: var(--phase5); }
+
+  /* ========== DAILY BLUEPRINT ========== */
+  .blueprint {
+    padding: 6rem 2rem;
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+  }
+
+  .blueprint-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .blueprint h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+
+  .blueprint .blueprint-sub {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 3rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .time-block {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .time-block:last-child { border-bottom: none; }
+
+  .time-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    color: var(--accent);
+    min-width: 110px;
+    letter-spacing: 1px;
+  }
+
+  .time-content h4 {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+
+  .time-content p {
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+
+  /* ========== RULES ========== */
+  .rules {
+    padding: 6rem 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .rules-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .rules h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .rule-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .rule-item:last-child { border-bottom: none; }
+
+  .rule-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: var(--accent);
+    line-height: 1;
+    min-width: 50px;
+  }
+
+  .rule-text h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  .rule-text p {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  /* ========== MINDSET ========== */
+  .mindset {
+    padding: 6rem 2rem;
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .mindset-inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .mindset h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    letter-spacing: 2px;
+    margin-bottom: 2.5rem;
+    color: var(--phase3);
+  }
+
+  .affirmation {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.3s ease;
+  }
+
+  .affirmation:hover {
+    color: var(--accent);
+  }
+
+  .affirmation:last-child { border-bottom: none; }
+
+  /* ========== CTA FINAL ========== */
+  .final-cta {
+    padding: 8rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(232,197,71,0.06) 0%, transparent 70%);
+  }
+
+  .final-cta h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.95;
+    position: relative;
+    z-index: 1;
+  }
+
+  .final-cta h2 span {
+    display: block;
+    background: linear-gradient(135deg, var(--accent), var(--phase2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .final-cta p {
+    color: var(--muted);
+    max-width: 550px;
+    margin: 1.5rem auto 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .start-btn {
+    display: inline-block;
+    padding: 1.25rem 4rem;
+    background: var(--accent);
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+
+  .start-btn:hover {
+    background: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 50px rgba(232,197,71,0.15);
+  }
+
+  /* ========== FOOTER ========== */
+  footer {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  /* ========== PROGRESS TRACKER ========== */
+  .tracker {
+    padding: 6rem 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .tracker-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .tracker h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .tracker-sub {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 3rem;
+  }
+
+  .month-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+
+  .month-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .month-card:hover {
+    border-color: var(--accent);
+    transform: scale(1.03);
+  }
+
+  .month-card .m-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .month-card .m-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+
+  .month-card .m-focus {
+    font-size: 0.82rem;
+    margin-top: 0.75rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .phase-header { flex-direction: column; gap: 0.5rem; }
+    .time-block { flex-direction: column; gap: 0.5rem; }
+    .rule-item { flex-direction: column; gap: 0.5rem; }
+    .time-label { min-width: unset; }
+    .action-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">The Complete Roadmap</div>
+  <h1>6 MONTHS<br><span>TO TRANSFORM<br>YOUR LIFE</span></h1>
+  <p class="hero-sub">Not years. Not a lifetime. Just 6 months of focused effort, intense discipline, and unwavering commitment. This is your step-by-step plan.</p>
+  <div class="hero-cta">
+    <a href="#roadmap">Begin the Journey &darr;</a>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto">
+  <blockquote>
+    Six months of extreme focus can put you years ahead. Six months of eliminating distractions, excuses, and hesitation can change your entire life.
+  </blockquote>
+  <div class="attrib">&mdash; Inspired by Jim Rohn</div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="overview" id="roadmap">
+  <div class="overview-inner">
+    <div class="overview-card">
+      <div class="num">01</div>
+      <h3>Take Full Responsibility</h3>
+      <p>Your decisions have led you here. Own every outcome and stop blaming external forces. From this moment, everything is on you.</p>
+    </div>
+    <div class="overview-card">
+      <div class="num">02</div>
+      <h3>Define Crystal-Clear Goals</h3>
+      <p>Vague goals create vague results. Get specific about what you want: measurable, precise, with a deadline of 6 months.</p>
+    </div>
+    <div class="overview-card">
+      <div class="num">03</div>
+      <h3>Build Your Road Map</h3>
+      <p>Break goals into daily, weekly, and monthly actions. Know exactly what needs to be done every single day.</p>
+    </div>
+    <div class="overview-card">
+      <div class="num">04</div>
+      <h3>Execute Relentlessly</h3>
+      <p>Stop negotiating with yourself. Remove emotion from execution. Your actions are non-negotiable from this point forward.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 1 -->
+<section class="phase phase--1" id="phase1">
+  <div class="phase-inner">
+    <div class="phase-header">
+      <div class="phase-number">01</div>
+      <div class="phase-title-group">
+        <h2>Master Your Time</h2>
+        <div class="timeline">Month 1 &mdash; Foundation</div>
+      </div>
+    </div>
+    <p class="phase-desc">Without controlling your time, nothing else works. Every single moment must serve your mission. Your schedule becomes your weapon.</p>
+    <div class="action-grid">
+      <div class="action-card">
+        <span class="icon">&#9200;</span>
+        <h4>Wake Up With a Plan</h4>
+        <p>Set a fixed wake time. Structure your mornings to maximize energy. Never start a day reacting to the world — start on your terms.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#9940;</span>
+        <h4>Eliminate Distractions</h4>
+        <p>Audit your time ruthlessly. Track every hour for one week. Remove everything that doesn't serve your mission — social media, idle browsing, aimless conversations.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#128204;</span>
+        <h4>Block Your Time</h4>
+        <p>Dedicate blocks to deep work, training, and growth. Protect those blocks like your life depends on it. No exceptions, no negotiations.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#9889;</span>
+        <h4>Set Hard Boundaries</h4>
+        <p>Every action either moves you forward or pulls you back — there is no neutral. Refuse to engage in anything that doesn't serve your vision.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 2 -->
+<section class="phase phase--2" id="phase2">
+  <div class="phase-inner">
+    <div class="phase-header">
+      <div class="phase-number">02</div>
+      <div class="phase-title-group">
+        <h2>Build Unbreakable Discipline</h2>
+        <div class="timeline">Month 2 &mdash; The Hardest Month</div>
+      </div>
+    </div>
+    <p class="phase-desc">Discipline is the bridge between goals and results. Not talent, not luck, not intelligence — just the relentless ability to show up and do what needs to be done.</p>
+    <div class="action-grid">
+      <div class="action-card">
+        <span class="icon">&#128170;</span>
+        <h4>Remove Emotion From Action</h4>
+        <p>Stop asking "do I feel like it?" Your feelings don't matter — your actions do. Motion creates emotion, not the other way around.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#128293;</span>
+        <h4>Push Through Resistance</h4>
+        <p>The first 30 days will be the hardest. Your old habits will fight back. This is the moment that separates the successful from the ones who fail.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#9878;</span>
+        <h4>Make Actions Non-Negotiable</h4>
+        <p>Decide in advance that your commitments are absolute. No snooze button. No skipped sessions. No "just this once."</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#128257;</span>
+        <h4>Build Trust in Yourself</h4>
+        <p>Every time you do what you said you would, you build self-trust. Every time you push through when it's easier to quit, you create unstoppable momentum.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 3 -->
+<section class="phase phase--3" id="phase3">
+  <div class="phase-inner">
+    <div class="phase-header">
+      <div class="phase-number">03</div>
+      <div class="phase-title-group">
+        <h2>Raise Your Standards</h2>
+        <div class="timeline">Month 3–4 &mdash; Level Up</div>
+      </div>
+    </div>
+    <p class="phase-desc">What you tolerate becomes your reality. If you tolerate mediocrity, you stay average. Demand excellence from yourself in everything you do.</p>
+    <div class="action-grid">
+      <div class="action-card">
+        <span class="icon">&#128200;</span>
+        <h4>Demand More Every Day</h4>
+        <p>If you used to stop at 10 reps, go to 12. If you worked for an hour, push to 90 minutes. Small goals become massive ones. Growth happens under pressure.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#127919;</span>
+        <h4>Chase Discomfort</h4>
+        <p>Comfort is the enemy of progress. Seek out challenges. Force yourself to grow. If you're not uncomfortable, you're not evolving.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#128269;</span>
+        <h4>Evaluate Yourself Daily</h4>
+        <p>Ask every night: Did I give my absolute best? Did I push further than yesterday? Did I hold myself to the highest standard? If not, fix it immediately.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#9855;</span>
+        <h4>Eliminate Weak Points</h4>
+        <p>No gaps in your discipline. No areas where you accept mediocrity. If something isn't at the highest level, you fix it. No exceptions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 4 -->
+<section class="phase phase--4" id="phase4">
+  <div class="phase-inner">
+    <div class="phase-header">
+      <div class="phase-number">04</div>
+      <div class="phase-title-group">
+        <h2>Develop an Unshakable Mindset</h2>
+        <div class="timeline">Month 4–5 &mdash; Mental Fortress</div>
+      </div>
+    </div>
+    <p class="phase-desc">Build a mind so strong that nothing can break you. One that doesn't give in to doubt, doesn't surrender to fear, and doesn't get shaken by obstacles.</p>
+    <div class="action-grid">
+      <div class="action-card">
+        <span class="icon">&#129504;</span>
+        <h4>Control Your Thoughts</h4>
+        <p>Your mind controls your reality. Be intentional about what enters your head. Remove negative thoughts the second they appear. Think only in absolutes: "I will succeed."</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#128165;</span>
+        <h4>Use Thought Replacement</h4>
+        <p>Don't resist negativity — replace it. "I'm not good enough" becomes "I'm capable, I'm strong, I'm worthy." The mind can only hold one thought at a time.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#127757;</span>
+        <h4>Protect Your Environment</h4>
+        <p>Eliminate negativity. If people around you are pulling you back, create distance. If your environment keeps you from operating at your highest level, change it.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#128171;</span>
+        <h4>Seek Struggle on Purpose</h4>
+        <p>Put yourself in difficult situations deliberately. Do things that scare you. The only way to build a strong mind is through resistance. Chase difficulty daily.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 5 -->
+<section class="phase phase--5" id="phase5">
+  <div class="phase-inner">
+    <div class="phase-header">
+      <div class="phase-number">05</div>
+      <div class="phase-title-group">
+        <h2>Relentless Execution</h2>
+        <div class="timeline">Month 5–6 &mdash; Full Acceleration</div>
+      </div>
+    </div>
+    <p class="phase-desc">All the discipline in the world means nothing without consistent action at the highest level. Stop overthinking. Become a machine of execution.</p>
+    <div class="action-grid">
+      <div class="action-card">
+        <span class="icon">&#128640;</span>
+        <h4>Operate With Urgency</h4>
+        <p>No procrastination, no delays. If something needs to be done, do it immediately. If an opportunity appears, seize it without hesitation.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#9201;</span>
+        <h4>Move Faster Than Everyone</h4>
+        <p>Speed matters. The faster you move, the more opportunities you create. While others are still debating, you're already 10 steps ahead building momentum.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#127775;</span>
+        <h4>Action Kills Fear</h4>
+        <p>Confidence doesn't come from thinking — it comes from doing. The more you act, the more you push yourself into the unknown, the stronger you become.</p>
+      </div>
+      <div class="action-card">
+        <span class="icon">&#9981;</span>
+        <h4>Never Stop Accelerating</h4>
+        <p>Don't slow down when you see results. Keep pushing. Winners don't take breaks once momentum builds. They keep accelerating until success becomes inevitable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAILY BLUEPRINT -->
+<section class="blueprint">
+  <div class="blueprint-inner">
+    <h2>Your Daily Blueprint</h2>
+    <p class="blueprint-sub">Every single day for 6 months follows this structure. No negotiation, no exceptions.</p>
+
+    <div class="time-block">
+      <div class="time-label">5:00 AM</div>
+      <div class="time-content">
+        <h4>Wake Up &mdash; No Snooze</h4>
+        <p>The moment the alarm goes off, you're up. No negotiation with comfort. Start with intention.</p>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time-label">5:15 AM</div>
+      <div class="time-content">
+        <h4>Mindset Priming</h4>
+        <p>Affirmations, visualization, journaling. Feed your mind before the world gets a chance to. Plant the seeds for the day.</p>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time-label">6:00 AM</div>
+      <div class="time-content">
+        <h4>Physical Training</h4>
+        <p>Train your body with intensity. Push past yesterday's limits. Growth only happens under pressure.</p>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time-label">7:30 AM</div>
+      <div class="time-content">
+        <h4>Deep Work Block #1</h4>
+        <p>Your most important work gets your freshest energy. No distractions. No phone. Pure, focused execution on your primary goal.</p>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time-label">12:00 PM</div>
+      <div class="time-content">
+        <h4>Refuel &amp; Reassess</h4>
+        <p>Proper nutrition. Review your morning progress. Adjust your afternoon plan if needed.</p>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time-label">1:00 PM</div>
+      <div class="time-content">
+        <h4>Deep Work Block #2</h4>
+        <p>Continue executing on your goals. Skill-building, business growth, or whatever moves the needle most.</p>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time-label">6:00 PM</div>
+      <div class="time-content">
+        <h4>Review &amp; Reflect</h4>
+        <p>Did I give my absolute best today? Did I hold myself to the highest standard? Plan tomorrow before you rest.</p>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time-label">10:00 PM</div>
+      <div class="time-content">
+        <h4>Recover</h4>
+        <p>Sleep is not optional — it's a weapon. 7–8 hours of quality rest to rebuild your body and mind for tomorrow's battle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NON-NEGOTIABLE RULES -->
+<section class="rules">
+  <div class="rules-inner">
+    <h2>The 10 Non-Negotiable Rules</h2>
+
+    <div class="rule-item">
+      <div class="rule-num">01</div>
+      <div class="rule-text">
+        <h4>Take Full Ownership</h4>
+        <p>No blaming circumstances, your past, your environment, or other people. Your decisions brought you here. Your decisions will take you forward.</p>
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">02</div>
+      <div class="rule-text">
+        <h4>Never Negotiate With Yourself</h4>
+        <p>The moment you ask "do I feel like it?" you've already lost. Decide in advance. Execute without questioning.</p>
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">03</div>
+      <div class="rule-text">
+        <h4>Protect Your Time Like Your Life Depends On It</h4>
+        <p>Every hour is either moving you forward or pulling you back. There is no neutral. Treat time as your most valuable resource.</p>
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">04</div>
+      <div class="rule-text">
+        <h4>Discipline Over Motivation</h4>
+        <p>Motivation is temporary. Discipline is permanent. Build the habit of executing without needing to feel inspired.</p>
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">05</div>
+      <div class="rule-text">
+        <h4>Raise Standards Continuously</h4>
+        <p>What you tolerate becomes your ceiling. Never accept "good enough." Demand excellence in every area, every day.</p>
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">06</div>
+      <div class="rule-text">
+        <h4>Control Your Mind</h4>
+        <p>Your mind is either your greatest weapon or your biggest obstacle. Feed it strength, belief, and focus. Starve doubt, fear, and negativity.</p>
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">07</div>
+      <div class="rule-text">
+        <h4>Chase Discomfort</h4>
+        <p>Growth only happens under pressure. If you're comfortable, you're not growing. Seek the hard path intentionally.</p>
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">08</div>
+      <div class="rule-text">
+        <h4>Execute With Speed</h4>
+        <p>Action kills fear. Momentum creates opportunity. Move fast, move decisively, and never wait for perfect conditions.</p>
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">09</div>
+      <div class="rule-text">
+        <h4>Guard Your Environment</h4>
+        <p>Remove negativity, toxic people, and distractions from your life. Your environment shapes your mind, and your mind shapes your results.</p>
+      </div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">10</div>
+      <div class="rule-text">
+        <h4>No Breaks, No Excuses, No Going Back</h4>
+        <p>For 6 months, there are no days off from your commitment. Once you start seeing who you can become, you'll never want to go back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MINDSET AFFIRMATIONS -->
+<section class="mindset">
+  <div class="mindset-inner">
+    <h2>Daily Affirmations</h2>
+    <div class="affirmation">I will succeed.</div>
+    <div class="affirmation">I will execute.</div>
+    <div class="affirmation">I am capable, strong, and worthy.</div>
+    <div class="affirmation">Nothing can stop me.</div>
+    <div class="affirmation">My discipline is stronger than my emotions.</div>
+    <div class="affirmation">I control my mind — it does not control me.</div>
+    <div class="affirmation">Action kills fear.</div>
+    <div class="affirmation">I am becoming unstoppable.</div>
+  </div>
+</section>
+
+<!-- 6 MONTH TRACKER -->
+<section class="tracker">
+  <div class="tracker-inner">
+    <h2>Your 6-Month Journey</h2>
+    <p class="tracker-sub">Each month builds on the last. No phase is optional.</p>
+    <div class="month-grid">
+      <div class="month-card">
+        <div class="m-num" style="color: var(--phase1)">01</div>
+        <div class="m-label">Month One</div>
+        <div class="m-focus">Master Time</div>
+      </div>
+      <div class="month-card">
+        <div class="m-num" style="color: var(--phase2)">02</div>
+        <div class="m-label">Month Two</div>
+        <div class="m-focus">Build Discipline</div>
+      </div>
+      <div class="month-card">
+        <div class="m-num" style="color: var(--phase3)">03</div>
+        <div class="m-label">Month Three</div>
+        <div class="m-focus">Raise Standards</div>
+      </div>
+      <div class="month-card">
+        <div class="m-num" style="color: var(--phase4)">04</div>
+        <div class="m-label">Month Four</div>
+        <div class="m-focus">Forge Mindset</div>
+      </div>
+      <div class="month-card">
+        <div class="m-num" style="color: var(--phase5)">05</div>
+        <div class="m-label">Month Five</div>
+        <div class="m-focus">Full Execution</div>
+      </div>
+      <div class="month-card">
+        <div class="m-num" style="color: var(--accent)">06</div>
+        <div class="m-label">Month Six</div>
+        <div class="m-focus">Unstoppable</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>The Next 6 Months<br><span>Are Yours.</span></h2>
+  <p>Move with speed. Move with purpose. Move with the kind of intensity that forces success to happen. When they're over, the world will not recognize you.</p>
+  <a href="#phase1" class="start-btn">Start Phase One Now</a>
+</section>
+
+<footer>
+  <p>Inspired by Jim Rohn &mdash; "You are the master of your mind, not the other way around."</p>
+</footer>
+
+</body>
+</html>

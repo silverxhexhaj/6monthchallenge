@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --black: #0a0a0a;
+  --dark: #111111;
+  --card: #161616;
+  --border: #222222;
+  --accent: #E8C547;
+  --accent-dim: #C4A32E;
+  --white: #f5f0e8;
+  --muted: #8a8577;
+  --phase1: #E8C547;
+  --phase2: #E87247;
+  --phase3: #47B8E8;
+  --phase4: #47E89A;
+  --phase5: #C747E8;
+}
+
+@theme inline {
+  --color-black: var(--black);
+  --color-dark: var(--dark);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-white: var(--white);
+  --color-muted: var(--muted);
+  --color-phase1: var(--phase1);
+  --color-phase2: var(--phase2);
+  --color-phase3: var(--phase3);
+  --color-phase4: var(--phase4);
+  --color-phase5: var(--phase5);
+  --font-bebas: var(--font-bebas-neue);
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-playfair);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-dm-sans), sans-serif;
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* Keyframes */
+@keyframes heroGlow {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(3deg) scale(1.05); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
+/* Hero gradient background */
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(232,197,71,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(232,114,71,0.05) 0%, transparent 50%);
+  animation: heroGlow 12s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* Font utilities */
+.font-bebas {
+  font-family: var(--font-bebas-neue), sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-playfair), serif;
+}
+
+/* Manifesto quote mark */
+.manifesto-quote::before {
+  content: '"';
+  font-size: 8rem;
+  position: absolute;
+  top: -3rem;
+  left: -1rem;
+  color: var(--accent);
+  opacity: 0.3;
+  font-family: var(--font-playfair), serif;
+}
