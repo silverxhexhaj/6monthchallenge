@@ -14,6 +14,7 @@
   --phase3: #47B8E8;
   --phase4: #47E89A;
   --phase5: #C747E8;
+  --phase6: #E8C547;
 }
 
 @theme inline {
@@ -30,6 +31,7 @@
   --color-phase3: var(--phase3);
   --color-phase4: var(--phase4);
   --color-phase5: var(--phase5);
+  --color-phase6: var(--phase6);
   --font-bebas: var(--font-bebas-neue);
   --font-sans: var(--font-dm-sans);
   --font-serif: var(--font-playfair);

@@ -15,7 +15,7 @@ export function Tracker() {
           Six Levels. No Shortcuts.
         </h2>
         <p className="mb-12 text-center text-muted">
-          Each level unlocks the next. Every phase builds on the last. You cannot skip ahead.
+          Each level unlocks the next. Every level builds on the last. You cannot skip ahead.
         </p>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
           {levels.map((level) => (

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const stats = [
   { num: "180", label: "Days" },
-  { num: "5", label: "Levels" },
+  { num: "6", label: "Levels" },
   { num: "1", label: "Mission" },
 ];
 
@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section className="hero-bg relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-8 py-8 text-center">
       <div className="relative z-10 mb-8 inline-block border border-accent px-6 py-2 text-xs uppercase tracking-[4px] text-accent animate-[fadeDown_1s_ease_0.2s_both]">
-        Cohort 1 — Now Accepting Members
+        Cohort 1 — Waitlist Open
       </div>
       <h1 className="relative z-10 font-bebas text-[clamp(4rem,12vw,11rem)] leading-[0.9] tracking-[-2px] animate-[fadeDown_1s_ease_0.4s_both]">
         THE 6-MONTH
@@ -26,10 +26,16 @@ export function Hero() {
       </p>
       <div className="relative z-10 mt-12 flex flex-col items-center gap-4 sm:flex-row animate-[fadeDown_1s_ease_0.8s_both]">
         <Link
-          href="#pricing"
+          href="/waitlist"
           className="inline-block bg-accent px-12 py-4 text-[0.85rem] font-bold tracking-[3px] text-black no-underline uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_10px_40px_rgba(232,197,71,0.2)]"
         >
           Join the Waitlist
+        </Link>
+        <Link
+          href="/login"
+          className="inline-block border border-border px-8 py-4 text-[0.85rem] font-bold tracking-[3px] text-muted no-underline uppercase transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+        >
+          Member Login
         </Link>
         <Link
           href="/journey"

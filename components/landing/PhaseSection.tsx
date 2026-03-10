@@ -7,6 +7,7 @@ const colorClasses: Record<PhaseColor, string> = {
   phase3: "text-phase3",
   phase4: "text-phase4",
   phase5: "text-phase5",
+  phase6: "text-phase6",
 };
 
 const borderColorClasses: Record<PhaseColor, string> = {
@@ -15,6 +16,7 @@ const borderColorClasses: Record<PhaseColor, string> = {
   phase3: "before:bg-phase3",
   phase4: "before:bg-phase4",
   phase5: "before:bg-phase5",
+  phase6: "before:bg-phase6",
 };
 
 interface PhaseSectionProps {

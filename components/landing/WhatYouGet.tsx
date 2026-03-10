@@ -3,7 +3,7 @@ const inclusions = [
     icon: "🗺️",
     title: "6-Month Challenge Framework",
     description:
-      "A structured system across 5 phases with clear monthly goals, weekly missions, and daily non-negotiables. The entire roadmap from day one to day 180.",
+      "A structured system across 6 levels with clear monthly goals, weekly missions, and daily non-negotiables. The roadmap from day one to day 180.",
   },
   {
     icon: "📅",
@@ -25,9 +25,9 @@ const inclusions = [
   },
   {
     icon: "👥",
-    title: "Accountability Community",
+    title: "External Community Bridge",
     description:
-      "Access to a private group of people doing the exact same challenge. Share wins, call out excuses, and hold each other to the standard.",
+      "Community can live outside the app at MVP. The product keeps execution, proof, reviews, and progression inside one system of record.",
   },
   {
     icon: "🎙️",
@@ -45,7 +45,7 @@ export function WhatYouGet() {
           What You Get
         </h2>
         <p className="mb-16 text-center text-muted">
-          One payment. Full access to the entire 6-month challenge system.
+          Waitlist first. Full structure, proof, and execution flows inside the app.
         </p>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {inclusions.map((item) => (

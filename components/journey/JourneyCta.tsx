@@ -32,10 +32,10 @@ export function JourneyCta({ profile }: JourneyCtaProps) {
             Follow {profile.handle} on X ↗
           </a>
           <Link
-            href="/#pricing"
+            href="/waitlist"
             className="inline-block border border-border px-8 py-4 text-[0.85rem] font-bold tracking-[3px] text-muted no-underline uppercase transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
           >
-            Join the Challenge
+            Join the Waitlist
           </Link>
         </div>
       </div>

@@ -1,4 +1,4 @@
-export type PhaseColor = "phase1" | "phase2" | "phase3" | "phase4" | "phase5";
+export type PhaseColor = "phase1" | "phase2" | "phase3" | "phase4" | "phase5" | "phase6";
 
 export interface ActionCard {
   icon: string;
@@ -189,6 +189,41 @@ export const phases: PhaseData[] = [
         title: "Never Stop Accelerating",
         description:
           "Don't slow down when you see results. Keep pushing. Winners don't take breaks once momentum builds. They keep accelerating until success becomes inevitable.",
+      },
+    ],
+  },
+  {
+    id: 6,
+    number: "06",
+    title: "Become Unstoppable",
+    timeline: "Level 6 — Month 6: Integration",
+    description:
+      "The final level is about integration. You are no longer building discipline from scratch. You are proving that the full system can hold under pressure and carry through to completion.",
+    color: "phase6",
+    actions: [
+      {
+        icon: "🛡",
+        title: "Protect The Standard",
+        description:
+          "Treat your routines as the baseline, not a temporary sprint. The system should now feel owned, not borrowed.",
+      },
+      {
+        icon: "📦",
+        title: "Package The Proof",
+        description:
+          "Document what changed, what worked, and what still needs tightening. Make your transformation visible and undeniable.",
+      },
+      {
+        icon: "🧭",
+        title: "Lead Without Drifting",
+        description:
+          "Operate with calm control. Momentum matters, but so does consistency under real-life friction and responsibility.",
+      },
+      {
+        icon: "🏁",
+        title: "Finish Clean",
+        description:
+          "Do not limp across the line. End the 180 days with the same seriousness you wanted on day one and leave with a repeatable operating system.",
       },
     ],
   },

@@ -11,18 +11,24 @@ export function FinalCta() {
         </span>
       </h2>
       <p className="relative z-10 mx-auto my-6 max-w-[550px] text-muted">
-        Cohort 1 is accepting a limited number of members. Reserve your spot,
-        follow the founder&apos;s journey on X, and show up for the next 6 months.
+        Cohort 1 is waitlist-first while checkout is deferred. Reserve your spot,
+        follow the founder&apos;s journey on X, or sign in if you already have access.
       </p>
       <div className="relative z-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <Link
-          href="#pricing"
+          href="/waitlist"
           className="inline-block bg-accent px-16 py-5 text-[0.9rem] font-bold tracking-[3px] text-black no-underline uppercase transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_15px_50px_rgba(232,197,71,0.15)]"
         >
-          Reserve Your Spot
+          Join The Waitlist
+        </Link>
+        <Link
+          href="/login"
+          className="inline-block border border-border px-10 py-5 text-[0.9rem] font-bold tracking-[3px] text-muted no-underline uppercase transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:text-accent"
+        >
+          Member Login
         </Link>
         <a
-          href="https://x.com"
+          href="https://x.com/silverxhexhaj"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block border border-border px-10 py-5 text-[0.9rem] font-bold tracking-[3px] text-muted no-underline uppercase transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:text-accent"

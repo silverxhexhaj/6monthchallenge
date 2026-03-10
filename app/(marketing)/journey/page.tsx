@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { JourneyHeader } from "@/components/journey/JourneyHeader";
-import { LatestCheckIn } from "@/components/journey/LatestCheckIn";
+import Link from "next/link";
 import { EntryLog } from "@/components/journey/EntryLog";
 import { JourneyCta } from "@/components/journey/JourneyCta";
+import { JourneyHeader } from "@/components/journey/JourneyHeader";
+import { LatestCheckIn } from "@/components/journey/LatestCheckIn";
 import { Footer } from "@/components/landing/Footer";
 import { founderProfile } from "@/lib/journeyData";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Silver's Journey — 6-Month Challenge",
@@ -18,7 +18,6 @@ export default function JourneyPage() {
 
   return (
     <>
-      {/* Nav back to home */}
       <nav className="flex items-center justify-between border-b border-border px-8 py-5">
         <Link
           href="/"
@@ -33,12 +32,10 @@ export default function JourneyPage() {
 
       <JourneyHeader profile={founderProfile} />
 
-      {latest && <LatestCheckIn entry={latest} />}
-
-      {rest.length > 0 && <EntryLog entries={rest} />}
+      {latest ? <LatestCheckIn entry={latest} /> : null}
+      {rest.length > 0 ? <EntryLog entries={rest} /> : null}
 
       <JourneyCta profile={founderProfile} />
-
       <Footer />
     </>
   );
